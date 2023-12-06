@@ -13,7 +13,7 @@ namespace MoreMoneyStart.Patches
 
             if (___groupCredits == quotaSettings.startingCredits && TimeOfDay.Instance.daysUntilDeadline == 3 && TimeOfDay.Instance.profitQuota == 130) // isolate to the first day of a new game
             {
-                ___groupCredits = 1000;
+                ___groupCredits = 50000;
             }
         }
     }
@@ -24,7 +24,7 @@ namespace MoreMoneyStart.Patches
         [HarmonyPostfix]
         static void resetTerminal()
         {
-            UnityEngine.Object.FindObjectOfType<Terminal>().groupCredits = 1000;
+            UnityEngine.Object.FindObjectOfType<Terminal>().groupCredits = 50000;
         }
     }
 }
